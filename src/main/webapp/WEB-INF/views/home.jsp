@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais - Casa do Código</title>
+
+<jsp:include page="usualHTML/bootstrap-import.jsp"></jsp:include>
 </head>
 <body>
 	<h1>Hello World</h1>
