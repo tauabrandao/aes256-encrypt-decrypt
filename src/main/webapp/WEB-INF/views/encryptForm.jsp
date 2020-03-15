@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!doctype html>
 <html>
@@ -8,6 +9,18 @@
 <meta charset="utf-8">
 <jsp:include page="usualHTML/bootstrap-import.jsp"></jsp:include>
 
+<script type="text/javascript">
+	function copyToClipboard (){
+			var copyText = document.getElementById("encryptedText");
+			copyText.disabled = false;
+			copyText.select();
+			document.execCommand("copy");
+			copyText.disabled = true;
+			document.getElementById("feedbackMsg").innerHTML = "Copied!";
+		}
+
+
+</script>
 
 </head>
 <body>
@@ -47,28 +60,44 @@
 					<h5>Parameters</h5>
 					<hr>
 
-					<form:form action="${s:mvcUrl('HC#encryptForm').build() }" method="POST">
+					<form:form action="${s:mvcUrl('CC#encryptText').build() }"
+						method="POST">
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="keyA">Key A</label> <input type="text"
-									class="form-control" id="keyA" name="keyA">
+									class="form-control" id="keyA" name="keyA" value="${text.keyA}">
 							</div>
 							<div class="form-group col-md-6">
 								<label for="keyB">Key B</label> <input type="text"
-									class="form-control" id="keyB" name="keyB">
+									class="form-control" id="keyB" name="keyB"
+									value="${text.keyB }">
 							</div>
 							<div class="form-group col-md-12">
-								<label for="text">Text to encrypt </label>
-								<textarea class="form-control" id="text" name="decriptedText" rows="3"></textarea>
+								<label for="decriptedText">Text to encrypt </label>
+								<textarea class="form-control" id="decriptedText"
+									name="decriptedText" rows="3">${text.decriptedText }</textarea>
 							</div>
-
 						</div>
 
 						<button type="submit" class="btn btn-primary">Encrypt</button>
 					</form:form>
 
-
 				</div>
+
+				<c:if test="${text.encryptedText != null }">
+					<div class="alert alert-warning" role="alert">
+						<p>
+							<strong>Your encrypted text:</strong>
+						</p>
+						<p>
+							<textarea disabled class="form-control" id="encryptedText"
+								name="encryptedText" rows="3">${text.encryptedText }</textarea>
+						</p>
+						<button onclick="copyToClipboard()" type="submit" class="btn btn-warning">Copy</button>
+						<span id="feedbackMsg"></span>
+					</div>
+				</c:if>
+
 			</div>
 		</div>
 	</div>
