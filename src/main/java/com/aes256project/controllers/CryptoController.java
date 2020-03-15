@@ -18,11 +18,22 @@ public class CryptoController {
 	@RequestMapping("/encrypt")
 	public ModelAndView encryptText(Text text, RedirectAttributes redirectAttributes) {
 
-		text.setEncryptedText(cryptoService.encrypt(text.getDecriptedText(), text.getKeyA(), text.getKeyB()));
+		text.setEncryptedText(cryptoService.encrypt(text.getDecryptedText(), text.getKeyA(), text.getKeyB()));
 		ModelAndView mv = new ModelAndView("redirect:/encrypt/form");
 		redirectAttributes.addFlashAttribute("text", text);
 
 		return mv;
 	}
+	
+	@RequestMapping("/decrypt")
+	public ModelAndView decryptText(Text text, RedirectAttributes redirectAttributes) {
+
+		text.setDecryptedText(cryptoService.decrypt(text.getEncryptedText(), text.getKeyA(), text.getKeyB()));
+		ModelAndView mv = new ModelAndView("redirect:/decrypt/form");
+		redirectAttributes.addFlashAttribute("text", text);
+
+		return mv;
+	}
+
 
 }

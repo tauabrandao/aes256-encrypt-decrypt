@@ -4,7 +4,7 @@ public class Text {
 
 	private String keyA;
 	private String keyB;
-	private String decriptedText;
+	private String decryptedText;
 	private String encryptedText;
 
 	public String getKeyA() {
@@ -23,12 +23,12 @@ public class Text {
 		this.keyB = keyB;
 	}
 
-	public String getDecriptedText() {
-		return decriptedText;
+	public String getDecryptedText() {
+		return decryptedText;
 	}
 
-	public void setDecriptedText(String decriptedText) {
-		this.decriptedText = decriptedText;
+	public void setDecryptedText(String decryptedText) {
+		this.decryptedText = decryptedText;
 	}
 
 	public String getEncryptedText() {
@@ -41,7 +41,7 @@ public class Text {
 
 	@Override
 	public String toString() {
-		return "Text [keyA=" + keyA + ", keyB=" + keyB + ", decriptedText=" + decriptedText + ", encryptedText="
+		return "Text [keyA=" + keyA + ", keyB=" + keyB + ", decriptedText=" + decryptedText + ", encryptedText="
 				+ encryptedText + "]";
 	}
 

@@ -11,7 +11,7 @@
 
 <script type="text/javascript">
 	function copyToClipboard() {
-		var copyText = document.getElementById("encryptedText");
+		var copyText = document.getElementById("decryptedText");
 		copyText.disabled = false;
 		copyText.select();
 		document.execCommand("copy");
@@ -54,15 +54,11 @@
 				</div>
 
 				<div class="jumbotron">
-
-
-					<h1>Encrypt</h1>
-
-
+					<h1>Decrypt</h1>
 					<h5>Parameters</h5>
 					<hr>
 
-					<form:form action="${s:mvcUrl('CC#encryptText').build() }"
+					<form:form action="${s:mvcUrl('CC#decryptText').build() }"
 						method="POST">
 						<div class="form-row">
 							<div class="form-group col-md-6">
@@ -75,25 +71,25 @@
 									value="${text.keyB }">
 							</div>
 							<div class="form-group col-md-12">
-								<label for="decryptedText">Text to encrypt </label>
-								<textarea class="form-control" id="decryptedText"
-									name="decryptedText" rows="3">${text.decryptedText }</textarea>
+								<label for="encryptedText">Text to decrypt </label>
+								<textarea class="form-control" id="encryptedText"
+									name="encryptedText" rows="3">${text.encryptedText }</textarea>
 							</div>
 						</div>
 
-						<button type="submit" class="btn btn-primary">Encrypt</button>
+						<button type="submit" class="btn btn-primary">Decrypt</button>
 					</form:form>
 
 				</div>
 
-				<c:if test="${text.encryptedText != null }">
+				<c:if test="${text.decryptedText != null }">
 					<div class="alert alert-warning" role="alert">
 						<p>
-							<strong>Your encrypted text:</strong>
+							<strong>Your decrypted text:</strong>
 						</p>
 						<p>
-							<textarea disabled class="form-control" id="encryptedText"
-								name="encryptedText" rows="3">${text.encryptedText }</textarea>
+							<textarea disabled class="form-control" id="decryptedText"
+								name="decryptedText" rows="3">${text.decryptedText }</textarea>
 						</p>
 						<button onclick="copyToClipboard()" type="submit"
 							class="btn btn-warning">Copy</button>
