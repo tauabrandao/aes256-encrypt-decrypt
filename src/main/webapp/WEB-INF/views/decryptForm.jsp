@@ -62,23 +62,30 @@
 						method="POST">
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="keyA">Key A</label> <input type="text"
+								<label for="keyA">Key A</label> <input required type="text"
 									class="form-control" id="keyA" name="keyA" value="${text.keyA}">
 							</div>
 							<div class="form-group col-md-6">
-								<label for="keyB">Key B</label> <input type="text"
+								<label for="keyB">Key B</label> <input required type="text"
 									class="form-control" id="keyB" name="keyB"
 									value="${text.keyB }">
 							</div>
 							<div class="form-group col-md-12">
 								<label for="encryptedText">Text to decrypt </label>
-								<textarea class="form-control" id="encryptedText"
+								<textarea required class="form-control" id="encryptedText"
 									name="encryptedText" rows="3">${text.encryptedText }</textarea>
 							</div>
 						</div>
 
 						<button type="submit" class="btn btn-primary">Decrypt</button>
 					</form:form>
+					
+					<c:if test="${msg != null }">
+					<br>
+						<div class="alert alert-danger" role="alert">
+  							${msg }
+						</div>
+					</c:if>
 
 				</div>
 

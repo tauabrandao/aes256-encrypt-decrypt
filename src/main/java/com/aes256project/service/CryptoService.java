@@ -21,8 +21,8 @@ public class CryptoService {
 	
 	private static CryptoParameters parameters = new CryptoParameters();
 
-	public String encrypt(String strToEncrypt, String keyA, String keyB) {
-		try {
+	public String encrypt(String strToEncrypt, String keyA, String keyB) throws Exception{
+		
 			byte[] iv = parameters.getByteArray();
 			IvParameterSpec ivspec = new IvParameterSpec(iv);
 
@@ -35,14 +35,11 @@ public class CryptoService {
 			Cipher cipher = Cipher.getInstance(parameters.getCipherTransformation());
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivspec);
 			return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes(parameters.getEncode())));
-		} catch (Exception e) {
-			System.out.println("Houve um erro ao encriptar: " + e.toString());
-		}
-		return null;
+		
 	}
 
-	public String decrypt(String strToDecrypt, String keyA, String keyB) {
-		try {
+	public String decrypt(String strToDecrypt, String keyA, String keyB) throws Exception {
+		
 			byte[] iv = parameters.getByteArray();
 			IvParameterSpec ivspec = new IvParameterSpec(iv);
 
@@ -55,10 +52,7 @@ public class CryptoService {
 			Cipher cipher = Cipher.getInstance(parameters.getCipherTransformation());
 			cipher.init(Cipher.DECRYPT_MODE, secretKey, ivspec);
 			return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
-		} catch (Exception e) {
-			System.out.println("Houve um erro ao decriptar: " + e.toString());
-		}
-		return null;
+		
 	}
 
 
