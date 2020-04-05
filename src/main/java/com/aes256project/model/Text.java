@@ -1,11 +1,16 @@
 package com.aes256project.model;
 
+import com.google.gson.Gson;
+
 public class Text {
 
 	private String keyA;
 	private String keyB;
 	private String decryptedText;
 	private String encryptedText;
+
+	public Text() {
+	}
 
 	public String getKeyA() {
 		return keyA;
@@ -43,6 +48,10 @@ public class Text {
 	public String toString() {
 		return "Text [keyA=" + keyA + ", keyB=" + keyB + ", decriptedText=" + decryptedText + ", encryptedText="
 				+ encryptedText + "]";
+	}
+
+	public String toJson() {
+		return new Gson().toJson(this);
 	}
 
 }
