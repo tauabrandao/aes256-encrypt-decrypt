@@ -21,6 +21,9 @@
       <li class="nav-item">
         <a class="nav-link" href="${s:mvcUrl('NC#decryptForm').build()}">Decrypt</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="${s:mvcUrl('NC#apiPage').build()}">API</a>
+      </li>
     </ul>
     
   </div>
