@@ -16,4 +16,8 @@ public class NavController {
 		return "decryptForm";
 	}
 	
+	@RequestMapping("api")
+	public String apiPage() {
+		return "apiPage";
+	}
 }
