@@ -20,7 +20,8 @@
 				<div class="text-center">
 					<h1>AES256Project API</h1>
 
-					<p>You can send POST requests in order to encrypt and decrypt texts!</p>
+					<p>You can send POST requests in order to encrypt and decrypt
+						texts!</p>
 					<hr>
 				</div>
 				<h2>Parameters</h2>
@@ -48,11 +49,15 @@
 								role="tabpanel" aria-labelledby="list-home-list">
 
 								<div class="row">
-									<div class="col-sm-6">It is the first part of the key
-										pair needed to perform an Encrypt or Decrypt operation, you
-										can always choose a key of your choice.</div>
 									<div class="col-sm-6">
-										<img style="border-radius: 5px" class="img-fluid" alt=""
+										<div>It is the first part of the key pair needed to
+											perform an Encrypt or Decrypt operation, you can always
+											choose a key of your choice.</div>
+									</div>
+									<div class="col-sm-6">
+										<img
+											style="border-radius: 5px; box-shadow: 10px 10px 5px grey;"
+											class="img-fluid" alt=""
 											src="${contextPath }resources/imgs/keya.png">
 									</div>
 								</div>
@@ -66,7 +71,9 @@
 										pair needed to perform the operations, you can always choose a
 										key of your preference (both are mandatory).</div>
 									<div class="col-sm-6">
-										<img style="border-radius: 5px" class="img-fluid" alt=""
+										<img
+											style="border-radius: 5px; box-shadow: 10px 10px 5px grey;"
+											class="img-fluid" alt=""
 											src="${contextPath }resources/imgs/keyb.png">
 									</div>
 								</div>
@@ -78,9 +85,12 @@
 								aria-labelledby="list-messages-list">
 
 								<div class="row">
-									<div class="col-sm-6">It is the text that will be processed, whether to encrypt or decrypt.</div>
+									<div class="col-sm-6">It is the text that will be
+										processed, whether to encrypt or decrypt.</div>
 									<div class="col-sm-6">
-										<img style="border-radius: 5px" class="img-fluid" alt=""
+										<img
+											style="border-radius: 5px; box-shadow: 10px 10px 5px grey;"
+											class="img-fluid" alt=""
 											src="${contextPath }resources/imgs/text.png">
 									</div>
 								</div>
@@ -98,7 +108,9 @@
 											style="color: red">0</span> to decrypt.
 									</div>
 									<div class="col-sm-6">
-										<img style="border-radius: 5px" class="img-fluid" alt=""
+										<img
+											style="border-radius: 5px; box-shadow: 10px 10px 5px grey;"
+											class="img-fluid" alt=""
 											src="${contextPath }resources/imgs/operation.png">
 									</div>
 								</div>
@@ -136,7 +148,8 @@
 
 
 				<h3>Encrypt</h3>
-				<img style="border-radius: 10px" class="img-fluid" alt=""
+				<img style="border-radius: 10px; box-shadow: 10px 10px 5px grey;"
+					class="img-fluid" alt=""
 					src="${contextPath }resources/imgs/encryptop.png">
 
 			</div>
@@ -148,7 +161,8 @@
 
 
 				<h3>Decrypt</h3>
-				<img style="border-radius: 10px" class="img-fluid" alt=""
+				<img style="border-radius: 10px; box-shadow: 10px 10px 5px grey;"
+					class="img-fluid" alt=""
 					src="${contextPath }resources/imgs/decryptop.png">
 
 			</div>
@@ -156,6 +170,6 @@
 		</div>
 
 	</div>
-
+	<br>
 </body>
 </html>
