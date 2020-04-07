@@ -53,7 +53,7 @@
 										can always choose a key of your choice.</div>
 									<div class="col-sm-6">
 										<img style="border-radius: 5px" class="img-fluid" alt=""
-											src="${contextPath }/resources/imgs/keya.png">
+											src="${contextPath }resources/imgs/keya.png">
 									</div>
 								</div>
 
@@ -67,7 +67,7 @@
 										key of your preference (both are mandatory).</div>
 									<div class="col-sm-6">
 										<img style="border-radius: 5px" class="img-fluid" alt=""
-											src="${contextPath }/resources/imgs/keyb.png">
+											src="${contextPath }resources/imgs/keyb.png">
 									</div>
 								</div>
 
@@ -81,7 +81,7 @@
 									<div class="col-sm-6">It is the text that will be processed, whether to encrypt or decrypt.</div>
 									<div class="col-sm-6">
 										<img style="border-radius: 5px" class="img-fluid" alt=""
-											src="${contextPath }/resources/imgs/text.png">
+											src="${contextPath }resources/imgs/text.png">
 									</div>
 								</div>
 
@@ -99,7 +99,7 @@
 									</div>
 									<div class="col-sm-6">
 										<img style="border-radius: 5px" class="img-fluid" alt=""
-											src="${contextPath }/resources/imgs/operation.png">
+											src="${contextPath }resources/imgs/operation.png">
 									</div>
 								</div>
 
@@ -137,7 +137,7 @@
 
 				<h3>Encrypt</h3>
 				<img style="border-radius: 10px" class="img-fluid" alt=""
-					src="${contextPath }/resources/imgs/encryptop.png">
+					src="${contextPath }resources/imgs/encryptop.png">
 
 			</div>
 
@@ -149,7 +149,7 @@
 
 				<h3>Decrypt</h3>
 				<img style="border-radius: 10px" class="img-fluid" alt=""
-					src="${contextPath }/resources/imgs/decryptop.png">
+					src="${contextPath }resources/imgs/decryptop.png">
 
 			</div>
 
