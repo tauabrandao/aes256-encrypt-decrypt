@@ -34,6 +34,17 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.28.v20200408</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/aes256project</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
